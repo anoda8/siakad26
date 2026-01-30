@@ -24,7 +24,7 @@
                     <!-- Dashboard Menu Item -->
                     <li>
                         <a href="{{ route('dashboard') }}" @class(['inline-flex w-full items-center px-2', 'menu-active' => request()->routeIs('dashboard')])>
-                            <span class="icon-[tabler--dashboard] size-4.5"></span>
+                            <i class="fa-solid fa-gauge"></i>
                             <span class="grow">Dashboard</span>
                         </a>
                     </li>
@@ -39,10 +39,9 @@
                         <button
                             class="accordion-toggle accordion-item-active:bg-neutral/10 inline-flex w-full items-center p-2 text-start text-sm font-normal"
                             aria-controls="user-management-collapse-user-management" aria-expanded="true">
-                            <span class="icon-[tabler--users] size-4.5"></span>
+                            <i class="fa-solid fa-users"></i>
                             <span class="grow">User Management</span>
-                            <span
-                                class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-4.5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
+                            <span class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-4.5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
                         </button>
                         <div id="user-management-collapse-user-management"
                             class="accordion-content mt-1 hidden w-full overflow-hidden transition-[height] duration-300"
@@ -50,6 +49,7 @@
                             <ul class="space-y-1">
                                 <li>
                                     <a href="{{ route('users.index') }}" @class(['inline-flex w-full items-center px-2', 'menu-active' => request()->routeIs('users.index')])>
+                                        <i class="fa-solid fa-users"></i>
                                         <span>Users</span>
                                     </a>
                                 </li>

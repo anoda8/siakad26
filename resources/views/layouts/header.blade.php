@@ -34,7 +34,7 @@
                         </li>
                         <li>
                             <a class="dropdown-item px-3" href="{{ route('settings.profile.edit') }}">
-                                <span class="icon-[tabler--user] size-5"></span>
+                                <i class="fa-solid fa-pen-to-square"></i>
                                 Edit profile
                             </a>
                         </li>
@@ -43,7 +43,7 @@
                                 @csrf
                                 <button type="submit"
                                     class="btn btn-text btn-error btn-block h-11 justify-start px-3 font-normal">
-                                    <span class="icon-[tabler--logout] size-5"></span>
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
                                     Logout
                                 </button>
                             </form>
