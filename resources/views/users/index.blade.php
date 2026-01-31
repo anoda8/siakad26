@@ -1,14 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="space-y-6">
+    <div class="space-y-6 disinitable">
         @session('success')
             <x-ui.alert variant="success">
                 {{ $value }}
             </x-ui.alert>
         @endsession
-
-        <div class="rounded-box shadow-base-300/10 bg-base-100 w-full pb-2 shadow-md">
+        
+        <livewire:tables.user-table />
+        {{-- <div class="rounded-box shadow-base-300/10 bg-base-100 w-full pb-2 shadow-md">
             <div class="overflow-x-auto">
                 <table class="table">
                     <thead>
@@ -43,13 +44,13 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div> --}}
 
-        @if ($users->hasPages())
+        {{-- @if ($users->hasPages())
             <div class="mt-4">
                 {{ $users->links() }}
             </div>
-        @endif
+        @endif --}}
     </div>
 @endsection
 

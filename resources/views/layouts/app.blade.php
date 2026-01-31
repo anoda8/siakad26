@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+    @livewireStyles
     <!-- Theme Script -->
     <script type="text/javascript">
         (function() {
@@ -46,6 +46,7 @@
             <!-- Content -->
             <main class="mx-auto w-full max-w-[1280px] flex-1 grow space-y-6 p-6">
                 @yield('content')
+                {{ isset($slot) ?? $slot }}
             </main>
 
             <!-- Footer -->
@@ -63,6 +64,7 @@
 
     <!-- FlyonUI JS -->
     <script src="https://cdn.jsdelivr.net/npm/flyonui@latest/dist/js/flyonui.js"></script>
+    @livewireScripts
     @stack('scripts')
 </body>
 
